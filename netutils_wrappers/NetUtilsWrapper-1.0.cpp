@@ -66,6 +66,8 @@ static const char *const EXPECTED_REGEXPS[] = {
 
     // Manage IPsec state.
     CMD "ip xfrm .*",
+    CMD "ip( -4| -6)? rule .* prio 25000",
+    CMD "ip( -4| -6)? rule .* goto 13000 prio 11999",
 
     // Manage vendor interfaces.
     CMD "tc .* dev " VENDOR_IFACE,
